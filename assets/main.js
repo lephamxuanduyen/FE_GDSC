@@ -1,5 +1,5 @@
 let cards = [];
-let num_cards = 9;
+let num_cards = 6;
 
 while (cards.length < num_cards) {
   let randomNumber = Math.floor(Math.random() * 11) + 1;
@@ -95,7 +95,7 @@ function addMove(card) {
 }
 
 function calculateScore() {
-  let score = parseInt(1000 / parseInt(movesCount)) + (minute * 60 + second);
+  let score = parseInt(1000 / (parseInt(movesCount) + (minute * 60 + second)));
   return score;
 }
 
